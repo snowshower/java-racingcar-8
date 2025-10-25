@@ -1,7 +1,6 @@
 package racingcar.domain;
 
 import racingcar.util.NumberGenerator;
-import racingcar.util.RandomNumberGenerator;
 
 public class Car {
     private final String carName;
