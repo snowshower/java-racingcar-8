@@ -8,6 +8,14 @@ public class Car {
     private final ForwardStrategy forwardStrategy;
     private final NumberGenerator numberGenerator;
 
+    //테스트용 생성자
+    public Car(String carName, int carPosition){
+        this.carName = carName;
+        this.carPosition = carPosition;
+        this.forwardStrategy = null;
+        this.numberGenerator = null;
+    }
+
     public Car(String carName, ForwardStrategy forwardStrategy, NumberGenerator numberGenerator) {
         this.carName = carName;
         this.carPosition = 0;

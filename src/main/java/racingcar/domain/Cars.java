@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 
 public class Cars {
     private final List<Car> cars;
-    private final String dash = "-";
+
+    //테스트용 생성자
+    public Cars(List<Car> cars){
+        this.cars = cars;
+    }
 
     public Cars(List<String> carNames, ForwardStrategy forwardStrategy, NumberGenerator numberGenerator) {
         this.cars = carNames.stream()

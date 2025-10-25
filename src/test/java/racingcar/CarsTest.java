@@ -22,7 +22,7 @@ public class CarsTest {
         }
     }
 
-    private List<String> testCarNames = List.of("pobi", "woni", "jun");
+    private final List<String> testCarNames = List.of("pobi", "woni", "jun");
 
     @Test
     @DisplayName("Cars 객체 생성 확인")
