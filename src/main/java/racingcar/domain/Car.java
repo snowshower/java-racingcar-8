@@ -9,7 +9,7 @@ public class Car {
     private final NumberGenerator numberGenerator;
 
     //테스트용 생성자
-    public Car(String carName, int carPosition){
+    public Car(String carName, int carPosition) {
         this.carName = carName;
         this.carPosition = carPosition;
         this.forwardStrategy = null;
@@ -17,8 +17,12 @@ public class Car {
     }
 
     public Car(String carName, ForwardStrategy forwardStrategy, NumberGenerator numberGenerator) {
-        if(carName.length()>5){
+        if (carName.length() > 5) {
             throw new IllegalArgumentException("자동차 이름은 5자 이하만 가능합니다.");
+        }
+
+        if (carName.isBlank() || carName == null) {
+            throw new IllegalArgumentException("자동차 이름은 비어있을 수 없습니다.");
         }
 
         this.carName = carName;
@@ -35,10 +39,10 @@ public class Car {
         return carPosition;
     }
 
-    public void move(){
+    public void move() {
         boolean canMove = forwardStrategy.isForward(numberGenerator.generateNumber());
 
-        if(canMove){
+        if (canMove) {
             carPosition++;
         }
     }
