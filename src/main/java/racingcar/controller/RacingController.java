@@ -24,6 +24,8 @@ public class RacingController {
         int attempt= inputView.attemptInput().getAttempts();
         Cars cars = racingService.createCars(carNames);
 
+        outputView.printResultStart();
+
         for (int i = 0; i < attempt; i++) {
             racingService.runOneRound(cars);
 

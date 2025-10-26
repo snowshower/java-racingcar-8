@@ -27,7 +27,11 @@ public class InputView {
 
     private int inputAttempts() {
         System.out.println("시도할 횟수는 몇 회인가요?");
-        int attempts=Integer.parseInt(Console.readLine());
-        return attempts;
+        try{
+            int attempts=Integer.parseInt(Console.readLine());
+            return attempts;
+        } catch(NumberFormatException e){
+            throw new IllegalArgumentException("횟수는 숫자여야 합니다.");
+        }
     }
 }

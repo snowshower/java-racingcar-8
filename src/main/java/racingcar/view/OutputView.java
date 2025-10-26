@@ -7,13 +7,17 @@ import java.util.stream.Collectors;
 
 public class OutputView {
 
-    public void printRoundResult(List<Car> cars) {
+    public void printResultStart(){
         System.out.println("실행 결과");
+    }
+
+    public void printRoundResult(List<Car> cars) {
 
         for (Car car : cars) {
             String dash = "-".repeat(car.getCarPosition());
             System.out.println(car.getCarName() + " : " + dash);
         }
+        System.out.println();
     }
 
     public void printWinners(List<Car> winners) {
